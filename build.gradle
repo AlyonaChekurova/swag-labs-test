@@ -1,0 +1,22 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = 'UTF-8'
+compileTestJava.options.encoding = 'UTF-8'
+javadoc.options.encoding = 'UTF-8'
+
+dependencies {
+    implementation 'org.projectlombok:lombok:1.18.18'
+    testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
+    testCompile group: 'io.appium', name: 'java-client', version: '7.2.0'
+    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
+    testCompile group: 'io.qameta.allure', name: 'allure-testng', version: '2.10.0'
+    testCompileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.10'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.10'
+}

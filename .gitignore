@@ -1,0 +1,8 @@
+*.iml
+.idea
+.gradle
+out
+build
+allure-results
+SwagLabs.apk
+SwagLabs.apk.idsig
